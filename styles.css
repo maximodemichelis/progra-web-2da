@@ -1,0 +1,427 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+section{
+    padding: 2rem 7%;
+
+}
+
+nav{
+    background: white;
+    height: 80px;
+    width: 100%;
+}
+
+label .logo{
+    color: black;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+nav ul li a:hover{
+    color: firebrick;
+    transition: .3s;
+
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: firebrick;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+
+
+@media (max-width:950px){
+    label .logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a{
+        font-size: 16px;
+
+    }
+
+    section{
+        padding: 2rem;
+    }
+}
+
+@media (max-width:850px){
+    .checkbtn{
+        display: block;
+    }
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: firebrick;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+        transition: ease-in-out;
+    }
+
+    section{
+        padding: 1rem;
+    }
+}
+
+.inicio{
+    min-height: 85vh;
+    display: block;
+    align-items: center;
+    background: url(images/autopista.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.inicio .contenido{
+    max-width: 60rem;
+}
+
+.inicio .contenido h3{
+    font-size: 4rem;
+    color: white;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.inicio .contenido p{
+    font-size: 1rem;
+    color: white;
+
+}
+
+.repro{
+    padding: 80px 5%;
+}
+
+.repro p{
+    color: firebrick;
+    font-size: 1rem;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, auto));
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 2rem;
+}
+
+.caja{
+    padding: 0px 20px 10px 20px;
+    background: transparent;
+    border-radius: 10px;
+    position: relative;
+    transition: all .35 ease;
+}
+
+.caja img{
+    width: 60;
+    height: auto
+}
+
+.caja h4{
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.caja h5{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.caja .carrito i{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    background: black;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+#escapes p{
+    color: firebrick;
+    font-size: 1rem;
+}
+
+#escapes{
+    padding: 80px 5%;
+}
+
+#accesorios{
+    padding: 80px 5%;
+}
+
+#accesorios p{
+    color: firebrick;
+    font-size: 1rem;
+}
+
+.caja i:hover{
+    cursor: pointer;
+}
+
+.titcarro{
+    font-weight: bold;
+    color: firebrick;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.rowcarro{
+    display: flex;
+}
+
+.itemcarro{
+    width: 45%;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+.preciocarro{
+    width: 20%;
+    font-size: 1.25rem;
+    color: black;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cantcarro{
+    width: 35%;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+
+.itemcol{
+    width: 45%;
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.imagcarro{
+    width: 100;
+    height: 100;
+}
+
+.titulocarro{
+    color: black;
+    margin-left: .5rem;
+    font-size: 1.2rem;
+}
+
+.preciocolumn{
+    width: 20%;
+    font-size: 1.2rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+
+.cantcolumn{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cantinput{
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid darkblue;
+    background-color: white;
+    color: black;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-right: 25px;
+}
+
+.botonquitar{
+    color: wheat;
+    background-color: red;
+    border: none;
+    border-radius: .3rem;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+}
+
+.carrototal{
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.titcarrototal{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: black;
+    margin-right: 20px;
+}
+
+.preciototal{
+    color: firebrick;
+    font-size: 1rem;
+}
+
+.comprarbot{
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 2rem;
+    color: white;
+    background-color: darkblue;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.pie{
+    width: 100%;
+    background: darkblue;
+}
+
+.divpie{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.divpie .cajafooter .logofooter{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+}
+
+.divpie .cajafooter a img{
+    width: 180px;
+}
+
+.divpie .cajafooter h2{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+.divpie .cajafooter p{
+    color: white;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.divpie .cajafooter .redes a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    color: white;
+    margin-right: 10px;
+    text-align: center;
+
+}
+
+
+
+
+
+
